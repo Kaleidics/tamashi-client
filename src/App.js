@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
+import  { compose } from "redux"
 import performVerifyToken from '../src/actions/authActions/performVerifyToken'
 
 import NavBar from "../src/components/elements/NavBar";
@@ -17,9 +18,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 class App extends Component {
     componentDidMount() {
-        
-        if (localStorage.getItem("localtoken") && localStorage.getItem("authedUser")) {
-            let token = localStorage.getItem("localtoken");
+        if (localStorage.getItem('localtoken') && localStorage.getItem('authedUser')) {
+            let token = localStorage.getItem('localtoken');
             this.props.dispatch(performVerifyToken(token));
         }
     }
@@ -27,15 +27,15 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div className="App">
+                <div className='App'>
                     <UniversalMessage />
-                    <Route path="/" component={NavBar} />
-                    <Route exact path="/" component={Home} />
+                    <Route path='/' component={NavBar} />
+                    <Route exact path='/' component={Home} />
                     {/* <Route exact path="/signin" component={Forms} /> */}
                     {/* <Route path="/dashboard" component={Dashboard} /> */}
-                    <RedirectAuthTrue authed={this.props.auth} path="/signin" component={Forms} />
-                    <RedirectAuthTrue authed={this.props.auth} path="/register" component={FormsRegister} />
-                    <RedirectPrivateRoute authed={this.props.auth} path="/dashboard" component={Dashboard} />
+                    <RedirectAuthTrue authed={this.props.auth} path='/signin' component={Forms} />
+                    <RedirectAuthTrue authed={this.props.auth} path='/register' component={FormsRegister} />
+                    <RedirectPrivateRoute authed={this.props.auth} path='/dashboard' component={Dashboard} />
                 </div>
             </BrowserRouter>
         );
@@ -44,7 +44,6 @@ class App extends Component {
 
 const mapStateToProps = state => ({
     auth: state.reduceAuthStatus.auth
-        
 });
 
 export default connect(mapStateToProps)(App);

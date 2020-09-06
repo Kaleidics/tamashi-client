@@ -51,14 +51,14 @@ class NavBar extends Component {
                     {this.props.auth && this.props.location.pathname === '/dashboard' ? (
                         <SignOutBtn />
                     ) : (
-                        <div className= {`navbar__btn-container ${menuOpenContainer}`}>
-                            <Link to='/signin' className='btn mobile-mtb-10 desktop-mr-15'>
+                        <div className={`navbar__btn-container ${menuOpenContainer}`}>
+                            <Link to='/signin' className='btn mobile-mtb-10 desktop-mr-15' onClick={this.toggleMenu}>
                                 {this.props.auth ? 'Dashboard' : 'Sign in'}
                             </Link>
                             {this.props.auth ? (
                                 <SignOutBtn />
                             ) : (
-                                <Link to='/register' className='btn btn--alt mobile-mtb-10'>
+                                <Link to='/register' className='btn btn--alt mobile-mtb-10' onClick={this.toggleMenu}>
                                     Register
                                 </Link>
                             )}
@@ -67,7 +67,7 @@ class NavBar extends Component {
                     <button className='navbar__toggle' onClick={this.toggleMenu}>
                         <span className={`navbar__toggle-line ${menuOpenLineA}`}></span>
                         <span className={`navbar__toggle-line ${menuOpenLineB}`}></span>
-                        <p class='navbar__AX-name'>Menu</p>
+                        <p className='navbar__AX-name'>Menu</p>
                     </button>
                 </div>
             </nav>
