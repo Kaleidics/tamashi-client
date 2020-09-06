@@ -12,6 +12,7 @@
         border: none;
         outline: none !important;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
 
     &__toggle:focus {
