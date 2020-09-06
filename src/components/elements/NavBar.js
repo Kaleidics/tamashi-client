@@ -21,7 +21,7 @@ class NavBar extends Component {
     }
 
     controlMenuOpen() {
-        if(window.innerWidth < 1024) {
+        if(window.innerWidth > 1024) {
             this.setState({
                 menu: false
             });
