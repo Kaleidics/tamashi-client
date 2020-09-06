@@ -1,10 +1,39 @@
 .navbar {
     background: $blue-1;
     width: 100%;
-    box-shadow: 0 4px 2px -2px rgba($black-1, .1);
+    box-shadow: 0 4px 2px -2px rgba($black-1, 0.1);
     height: 6.5rem;
-
     display: flex;
+
+    &__toggle {
+        width: 30px;
+        height: 60px;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__AX-name {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    @media screen and (min-width: 1024px) {
+        &__toggle {
+            display: none;
+        }
+    }
+
+    &__toggle-line {
+        width: 100%;
+        height: 2px;
+        background: $white-1;
+        margin: 6px 0;
+        transition: 0.5s;
+        display: block;
+    }
 
     &__container {
         width: 100%;
@@ -15,11 +44,33 @@
         padding: 1rem 1.5rem;
         max-width: 1440px;
         margin: 0 auto;
+        position: relative;
     }
 
     &__btn-container {
-        display: inline-flex;
+        bottom: -139px;
+        position: absolute;
+        z-index: 100;
+        background: $blue-1;
+        width: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        animation: moveInTop .2s ease-out;
     }
+
+    @media screen and (min-width: 1024px) {
+        &__btn-container {
+            position: relative;
+            top: 0;
+            flex-direction: row;
+            padding: 0;
+            width: inherit;
+            justify-content: flex-end;
+        }
+    }
+
 
     &__logo {
         display: flex;
@@ -44,5 +95,24 @@
         margin: auto 1rem;
         font-weight: bold;
         color: $white-1;
+    }
+}
+
+.lineA {
+    transform: rotate(270deg) translate(-9px, 5px);
+}
+
+.lineB {
+    transform: rotate(-90deg) translate(-9px, -5px);
+}
+
+.toggleMenu {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .toggleMenu {
+        display: inherit;
+        animation: none;
     }
 }
