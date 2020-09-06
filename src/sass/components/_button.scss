@@ -1,0 +1,26 @@
+.btn {
+    min-width: 11rem;
+    font-family: 'Lato', sans-serif;
+    color: $white-1;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    background: $blue-2;
+    padding: .5rem;
+    border-radius: 3px;
+    box-shadow: 3px 5px 8px -1px rgba($black-1, .15);
+    border: none;
+    cursor: pointer;
+}
+
+.btn--alt {
+    color: $white-1;
+    font-weight: 400;
+    background: none;
+    border: 1px solid $white-1;
+}
+
+.btn--solid {
+    width: 12rem;
+    background: lighten($primary-1, 15%);
+}

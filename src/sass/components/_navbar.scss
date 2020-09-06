@@ -1,0 +1,48 @@
+.navbar {
+    background: $blue-1;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px rgba($black-1, .1);
+    height: 6.5rem;
+
+    display: flex;
+
+    &__container {
+        width: 100%;
+        background: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__btn-container {
+        display: inline-flex;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $black-1;
+        }
+        cursor: pointer;
+    }
+
+    &__image {
+        width: 4rem;
+    }
+
+    &__name {
+        font-size: 2.2rem;
+        align-self: flex-end;
+        margin: auto 1rem;
+        font-weight: bold;
+        color: $white-1;
+    }
+}

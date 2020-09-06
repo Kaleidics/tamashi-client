@@ -1,0 +1,70 @@
+.universalMessage {
+    position: fixed;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 50rem;
+    height: 12%;
+    max-height: 7rem;
+    z-index: 100;
+    border-radius: 3px;
+    box-shadow: 3px 5px 8px -1px rgba($primary-1, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background: $white-1;
+    border-left: 3px solid white;
+
+    @media screen and (min-width: 400px) {
+        height: 10%;
+    }
+
+
+    p.universalMessage__heading {
+        color: $black-1;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    p.universalMessage_desc {
+        color: $grey-3;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+.success {
+    border-color: $green-1;
+    animation: leftAndOut 3s ease-out forwards;
+}
+
+.failure {
+    border-color: $red-2;
+    animation: leftAndStay 0.8s ease-out forwards;
+
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.icon-success {
+    color: $green-1;
+}
+
+.icon-failure {
+    color: $red-2;
+}
+
+.i-cancel {
+    cursor: pointer;
+    color: lighten($grey-3, 20%);
+}
+
+.i-right-align {
+    margin-left: auto;
+}
