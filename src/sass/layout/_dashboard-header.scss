@@ -1,0 +1,38 @@
+.dashboard-header {
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(to bottom, rgba(0,0,0, 0.3), rgba(0,0,0, 0.8)), url('../../assets/dashboard_background_2.jpg');
+    background-size: cover;
+    background-position: center bottom;
+
+
+    &__heading {
+        color: $white-1;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-size: 2.4rem;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn:first-of-type {
+            max-width: 19rem;
+        }
+
+        .btn:last-of-type {
+            max-width: 15rem;
+        }
+    }
+}

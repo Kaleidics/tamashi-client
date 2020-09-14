@@ -10,7 +10,7 @@ class SignOutBtn extends React.Component {
 
     render() {
         return (
-            <button className="btn btn--alt" onClick={this.handleSignOut}>
+            <button className='btn btn--alt mobile-mtb-10' onClick={this.handleSignOut}>
                 Sign Out
             </button>
         );

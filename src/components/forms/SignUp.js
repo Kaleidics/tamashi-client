@@ -84,7 +84,7 @@ class SignUp extends React.Component {
     render() {
         return (
             <div className='form-wrapper'>
-                <form className='form animate-right' noValidate onSubmit={this.handleSubmit}>
+                <form className='form animate-right' noValidate onSubmit={this.handleSubmit} >
                     <fieldset className='fieldset'>
                         <legend className='legend'>let's get started</legend>
                         <FormInput

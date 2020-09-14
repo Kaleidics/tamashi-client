@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux';
 
+import DashboardHeader from '../layout/DashboardHeader'
+
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
@@ -18,9 +20,7 @@ class Dashboard extends React.Component {
     render() {
         return (
             <main className="dashboard">
-                <section className="dashboard__main-content">
-                  
-                </section>
+                <DashboardHeader username="Eddie Chu"/>
             </main>
         );
     }

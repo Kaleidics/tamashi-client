@@ -11,9 +11,8 @@ class NavBar extends Component {
         super(props);
 
         this.state = {
-           menu: false
+            menu: false,
         };
-
     }
 
     componentDidMount() {
@@ -21,22 +20,20 @@ class NavBar extends Component {
     }
 
     controlMenuOpen() {
-        if(window.innerWidth > 1024) {
+        if (window.innerWidth > 1024) {
             this.setState({
-                menu: false
+                menu: false,
             });
         }
     }
-    
+
     toggleMenu = () => {
         this.setState({
-            menu: !this.state.menu
+            menu: !this.state.menu,
         });
-    }
+    };
 
     render() {
-
-
         let menuOpenLineA = this.state.menu ? 'lineA' : '';
         let menuOpenLineB = this.state.menu ? 'lineB' : '';
         let menuOpenContainer = this.state.menu ? '' : 'toggleMenu';
@@ -48,9 +45,7 @@ class NavBar extends Component {
                         <img className='navbar__image' src={logofinal} alt='ExpenX logo' />
                         <p className='navbar__name'>tamashi</p>
                     </Link>
-                    {this.props.auth && this.props.location.pathname === '/dashboard' ? (
-                        <SignOutBtn />
-                    ) : (
+                    
                         <div className={`navbar__btn-container ${menuOpenContainer}`}>
                             <Link to='/signin' className='btn mobile-mtb-10 desktop-mr-15' onClick={this.toggleMenu}>
                                 {this.props.auth ? 'Dashboard' : 'Sign in'}
@@ -63,7 +58,7 @@ class NavBar extends Component {
                                 </Link>
                             )}
                         </div>
-                    )}
+                    
                     <button className='navbar__toggle' onClick={this.toggleMenu}>
                         <span className={`navbar__toggle-line ${menuOpenLineA}`}></span>
                         <span className={`navbar__toggle-line ${menuOpenLineB}`}></span>
